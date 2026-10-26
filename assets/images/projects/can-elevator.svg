@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+
+<defs>
+  <linearGradient id='cyanGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#06b6d4' />
+    <stop offset='100%' stop-color='#3b82f6' />
+  </linearGradient>
+  <linearGradient id='amberGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#f59e0b' />
+    <stop offset='100%' stop-color='#ef4444' />
+  </linearGradient>
+  <linearGradient id='chipGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#1e293b' />
+    <stop offset='100%' stop-color='#0f172a' />
+  </linearGradient>
+  <pattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'>
+    <path d='M 20 0 L 0 0 0 20' fill='none' stroke='#1e293b' stroke-width='0.5'/>
+  </pattern>
+</defs>
+
+  <rect width="800" height="450" fill="#080e1a" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <text x="40" y="45" font-family="monospace" font-size="13" fill="#06b6d4" letter-spacing="2">[ SYSTEM TOPOLOGY: CAN 2.0B MULTI-NODE NETWORK ]</text>
+  <text x="40" y="70" font-family="sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">CAN-Based Intelligent Elevator Control Architecture</text>
+  
+  <!-- CAN Bus Trunk -->
+  <line x1="100" y1="180" x2="700" y2="180" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6 4" />
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#3b82f6" stroke-width="4" stroke-dasharray="6 4" />
+  <text x="400" y="170" font-family="monospace" font-size="12" fill="#f59e0b" text-anchor="middle">CAN_H (Differential High)</text>
+  <text x="400" y="222" font-family="monospace" font-size="12" fill="#3b82f6" text-anchor="middle">CAN_L (Differential Low) // 120 Ohm Terminated</text>
+
+  <!-- Node 1: Master LPC2129 -->
+  <g transform="translate(80, 250)">
+    <rect width="180" height="150" rx="8" fill="url(#chipGrad)" stroke="#06b6d4" stroke-width="2" />
+    <rect x="10" y="10" width="160" height="24" rx="4" fill="#06b6d4" fill-opacity="0.15" />
+    <text x="90" y="27" font-family="monospace" font-size="12" font-weight="bold" fill="#06b6d4" text-anchor="middle">ARM7 LPC2129</text>
+    <text x="90" y="55" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Master Floor Controller</text>
+    <text x="90" y="80" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">PWM Motor H-Bridge</text>
+    <text x="90" y="105" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">16x2 Status LCD</text>
+    <text x="90" y="130" font-family="monospace" font-size="9" fill="#10b981" text-anchor="middle">Priority Arbitration</text>
+    <line x1="90" y1="0" x2="90" y2="-50" stroke="#06b6d4" stroke-width="2" />
+  </g>
+
+  <!-- Node 2: Floor Call Station -->
+  <g transform="translate(310, 250)">
+    <rect width="180" height="150" rx="8" fill="url(#chipGrad)" stroke="#3b82f6" stroke-width="2" />
+    <rect x="10" y="10" width="160" height="24" rx="4" fill="#3b82f6" fill-opacity="0.15" />
+    <text x="90" y="27" font-family="monospace" font-size="12" font-weight="bold" fill="#60a5fa" text-anchor="middle">NODE 1: FLOOR CALL</text>
+    <text x="90" y="55" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Transceiver MCP2551</text>
+    <text x="90" y="80" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Floor 1 &amp; 2 Request</text>
+    <text x="90" y="105" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Keypad Switch Matrix</text>
+    <text x="90" y="130" font-family="monospace" font-size="9" fill="#10b981" text-anchor="middle">ID: 0x101 (High Prio)</text>
+    <line x1="90" y1="0" x2="90" y2="-50" stroke="#3b82f6" stroke-width="2" />
+  </g>
+
+  <!-- Node 3: Safety Cab Node -->
+  <g transform="translate(540, 250)">
+    <rect width="180" height="150" rx="8" fill="url(#chipGrad)" stroke="#ef4444" stroke-width="2" />
+    <rect x="10" y="10" width="160" height="24" rx="4" fill="#ef4444" fill-opacity="0.15" />
+    <text x="90" y="27" font-family="monospace" font-size="12" font-weight="bold" fill="#f87171" text-anchor="middle">NODE 2: SAFETY CAB</text>
+    <text x="90" y="55" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Emergency Override</text>
+    <text x="90" y="80" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Opto-Isolated Inputs</text>
+    <text x="90" y="105" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">DC Motor Brake Lock</text>
+    <text x="90" y="130" font-family="monospace" font-size="9" fill="#ef4444" text-anchor="middle">ID: 0x001 (Highest Prio)</text>
+    <line x1="90" y1="0" x2="90" y2="-50" stroke="#ef4444" stroke-width="2" />
+  </g>
+
+  <!-- Termination resistors -->
+  <rect x="75" y="175" width="25" height="30" rx="3" fill="#475569" />
+  <text x="87" y="194" font-family="monospace" font-size="8" fill="#f8fafc" text-anchor="middle">120R</text>
+  <rect x="700" y="175" width="25" height="30" rx="3" fill="#475569" />
+  <text x="712" y="194" font-family="monospace" font-size="8" fill="#f8fafc" text-anchor="middle">120R</text>
+</svg>

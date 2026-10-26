@@ -1,0 +1,346 @@
+/**
+ * HERO SECTION & VIVID VIDEO BACKGROUND
+ * Stretched 100vh top-to-bottom edge-to-edge, zero bottom peek, watermark cropped out
+ */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-height);
+  padding-bottom: 0;
+  overflow: hidden;
+  background-color: #02050e;
+}
+
+/* Stretched Edge-to-Edge Background Video (Full Screen Coverage Top-to-Bottom) */
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.96;
+  filter: brightness(116%) contrast(110%);
+  will-change: transform;
+  transform: scale(1.15); /* Full stretch, crops watermark outside frame */
+  transform-origin: 10% 10%; /* Off-centers top-left, keeping watermark out of frame */
+  pointer-events: none;
+}
+
+/* Crystal-Clear Subtle Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 5, 14, 0.18);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Scanlines disabled for clean, line-free visuals */
+.hero-scanlines {
+  display: none !important;
+}
+
+/* Hero Content Grid - Grand balanced layout fitting strictly within 100vh */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: clamp(24px, 3.5vw, 48px);
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+/* Left Column: Completely UNBLURRED, text floats directly over video with sharp contrast */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Engineer Name in Crisp Russo One Cyber Silicon Font */
+.hero-name {
+  font-family: var(--font-title);
+  font-size: clamp(2.05rem, 2.8vw, 2.75rem);
+  font-weight: 400; /* Russo One has native display weight */
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 0 35px rgba(0, 240, 255, 0.28), 0 2px 14px rgba(0, 0, 0, 0.95), 0 4px 30px rgba(0, 0, 0, 0.85);
+}
+
+/* Embedded Systems & Firmware Engineer: High-Contrast Raleway Electric Cyan */
+.hero-title-role {
+  display: block;
+  font-family: var(--font-subtitle);
+  font-size: clamp(1.2rem, 1.6vw, 1.48rem);
+  font-weight: 800;
+  color: #00f0ff;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  text-shadow: 0 0 22px rgba(0, 240, 255, 0.6), 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Sub-heading in warm bright amber */
+.hero-title {
+  font-family: var(--font-mono);
+  font-size: clamp(0.85rem, 1vw, 0.96rem);
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 1.5px;
+  margin-top: 3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Capsule Card: Sleek, unblurred, transparent glassmorphism */
+.hero-desc-card {
+  background: rgba(3, 9, 24, 0.52);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 240, 255, 0.28);
+  border-left: 3.5px solid #00f0ff;
+  border-radius: 8px;
+  padding: 14px 20px;
+  max-width: 620px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 240, 255, 0.08);
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.hero-desc {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #f8fafc;
+  line-height: 1.72;
+  letter-spacing: 0.3px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-desc .highlight-chip {
+  color: #00f0ff;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: rgba(0, 240, 255, 0.16);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.42);
+  display: inline-block;
+  line-height: 1.35;
+  vertical-align: middle;
+  margin: 0 2px;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+.hero-desc .highlight-gold {
+  color: #fbbf24;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: rgba(245, 158, 11, 0.16);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(245, 158, 11, 0.42);
+  display: inline-block;
+  line-height: 1.35;
+  vertical-align: middle;
+  margin: 0 2px;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.2);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+/* Right Column: Clean Profile Picture with Glowing Cyan Ring */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.profile-hex-frame {
+  position: relative;
+  width: clamp(280px, 24vw, 335px);
+  height: clamp(280px, 24vw, 335px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.hex-glow-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dashed rgba(212, 175, 55, 0.45);
+  animation: rotate-ring 30s linear infinite;
+  box-shadow: 0 0 34px rgba(212, 175, 55, 0.25);
+  pointer-events: none;
+}
+
+@keyframes rotate-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hex-inner-border {
+  position: absolute;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  border-radius: 50%;
+  border: 2px solid rgba(212, 175, 55, 0.35);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Crisp photo with royal gold precision bevel */
+.profile-avatar-img {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #d4af37;
+  box-shadow: 0 0 36px rgba(212, 175, 55, 0.38), 0 16px 36px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 15;
+  background-color: #060d1f;
+}
+
+/* ========================================================
+   SEPARATE STATS TRANSITION SECTION (LOWERED DOWN)
+   ======================================================== */
+.stats-transition-section {
+  position: relative;
+  z-index: 10;
+  padding: 45px 0 35px;
+  background: #02050e;
+}
+
+.hero-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 24px 30px;
+  background: #060d1f;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-md);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.8), 0 0 22px rgba(212, 175, 55, 0.1);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fbbf24;
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 6px;
+}
+
+.stat-sub {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: calc(var(--nav-height) + 20px) 0 35px;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+  }
+  .hero-text {
+    align-items: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .profile-hex-frame {
+    width: 220px;
+    height: 220px;
+  }
+  .hero-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: calc(var(--nav-height) + 15px) 0 35px;
+  }
+  .hero-name {
+    font-size: 2.1rem;
+  }
+  .hero-title-role {
+    font-size: 1.25rem;
+  }
+  .hero-desc-card {
+    padding: 12px 16px;
+    max-width: 100%;
+  }
+  .profile-hex-frame {
+    width: 190px;
+    height: 190px;
+  }
+  .hero-stats-bar {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 18px;
+  }
+}

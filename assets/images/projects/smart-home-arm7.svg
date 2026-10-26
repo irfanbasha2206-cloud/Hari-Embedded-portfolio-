@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+
+<defs>
+  <linearGradient id='cyanGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#06b6d4' />
+    <stop offset='100%' stop-color='#3b82f6' />
+  </linearGradient>
+  <linearGradient id='amberGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#f59e0b' />
+    <stop offset='100%' stop-color='#ef4444' />
+  </linearGradient>
+  <linearGradient id='chipGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#1e293b' />
+    <stop offset='100%' stop-color='#0f172a' />
+  </linearGradient>
+  <pattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'>
+    <path d='M 20 0 L 0 0 0 20' fill='none' stroke='#1e293b' stroke-width='0.5'/>
+  </pattern>
+</defs>
+
+  <rect width="800" height="450" fill="#080e1a" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <text x="40" y="45" font-family="monospace" font-size="13" fill="#06b6d4" letter-spacing="2">[ BARE-METAL C // ARM7TDMI ARCHITECTURE ]</text>
+  <text x="40" y="70" font-family="sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">LPC2129 Dual-Mode Smart Home Automation Controller</text>
+
+  <!-- Core LPC2129 -->
+  <g transform="translate(270, 120)">
+    <rect width="260" height="230" rx="10" fill="url(#chipGrad)" stroke="#06b6d4" stroke-width="2" />
+    <rect x="15" y="15" width="230" height="28" rx="4" fill="#06b6d4" fill-opacity="0.2" />
+    <text x="130" y="34" font-family="monospace" font-size="13" font-weight="bold" fill="#22d3ee" text-anchor="middle">NXP LPC2129 (ARM7)</text>
+    <text x="20" y="70" font-family="monospace" font-size="10" fill="#cbd5e1">• IODIR0 Register Direction</text>
+    <text x="20" y="95" font-family="monospace" font-size="10" fill="#cbd5e1">• IOCLR0 / IOSET0 Fast I/O</text>
+    <text x="20" y="120" font-family="monospace" font-size="10" fill="#cbd5e1">• UART0 Interrupt Vector (VIC)</text>
+    <text x="20" y="145" font-family="monospace" font-size="10" fill="#cbd5e1">• External Interrupt EXT_INIT</text>
+    <text x="20" y="170" font-family="monospace" font-size="10" fill="#cbd5e1">• 4-Bit HD44780 LCD Driver</text>
+    <text x="20" y="195" font-family="monospace" font-size="9" fill="#10b981">• Deterministic State Machine</text>
+  </g>
+
+  <!-- Left: Inputs -->
+  <g transform="translate(50, 140)">
+    <rect width="180" height="80" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="15" y="27" font-family="monospace" font-size="11" font-weight="bold" fill="#60a5fa">HC-05 Bluetooth SPP</text>
+    <text x="15" y="47" font-family="sans-serif" font-size="10" fill="#94a3b8">Wireless Mobile UART Link</text>
+    <text x="15" y="65" font-family="monospace" font-size="9" fill="#06b6d4">Baud: 9600 8-N-1</text>
+    <line x1="180" y1="40" x2="270" y2="180" stroke="#3b82f6" stroke-width="2" />
+
+    <rect y="100" width="180" height="80" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="15" y="127" font-family="monospace" font-size="11" font-weight="bold" fill="#fbbf24">Manual Switch Array</text>
+    <text x="15" y="147" font-family="sans-serif" font-size="10" fill="#94a3b8">Hardware Pushbuttons</text>
+    <text x="15" y="165" font-family="monospace" font-size="9" fill="#f59e0b">EXTINT Interrupt ISR</text>
+    <line x1="180" y1="140" x2="270" y2="250" stroke="#f59e0b" stroke-width="2" />
+  </g>
+
+  <!-- Right: Outputs -->
+  <g transform="translate(570, 140)">
+    <rect width="180" height="80" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <text x="15" y="27" font-family="monospace" font-size="11" font-weight="bold" fill="#34d399">16x2 Character LCD</text>
+    <text x="15" y="47" font-family="sans-serif" font-size="10" fill="#94a3b8">Live System &amp; Mode Status</text>
+    <text x="15" y="65" font-family="monospace" font-size="9" fill="#10b981">Port 0 Nibble Mode</text>
+    <line x1="0" y1="40" x2="-40" y2="180" stroke="#10b981" stroke-width="2" />
+
+    <rect y="100" width="180" height="80" rx="6" fill="#1e293b" stroke="#ec4899" stroke-width="1.5" />
+    <text x="15" y="127" font-family="monospace" font-size="11" font-weight="bold" fill="#f472b6">ULN2003 Relay Bank</text>
+    <text x="15" y="147" font-family="sans-serif" font-size="10" fill="#94a3b8">AC Appliances (Fan/Light)</text>
+    <text x="15" y="165" font-family="monospace" font-size="9" fill="#f472b6">Opto-Coupled Isolation</text>
+    <line x1="0" y1="140" x2="-40" y2="250" stroke="#ec4899" stroke-width="2" />
+  </g>
+</svg>

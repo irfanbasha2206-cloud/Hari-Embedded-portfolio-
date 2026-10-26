@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>M. Hari Prasad // Embedded Systems & Firmware Engineer Portfolio</title>
+  <meta name="title" content="M. Hari Prasad // Embedded Systems & Firmware Engineer Portfolio">
+  <meta name="description" content="Personal engineering portfolio of M. Hari Prasad — Embedded Systems Engineer specializing in ARM7 LPC2129, STM32, CAN Bus 2.0B, FreeRTOS, ESP32 IoT, and hardware-software integration.">
+  <meta name="keywords" content="Embedded Systems Engineer, Firmware Engineer, M. Hari Prasad, ARM7, LPC2129, STM32, FreeRTOS, CAN Bus, ESP32, IoT, Hardware-Software Integration, Tirupur, Coimbatore">
+  <meta name="author" content="M. Hari Prasad">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23081122'/><text x='50' y='65' font-family='monospace' font-size='50' font-weight='bold' fill='%2306b6d4' text-anchor='middle'>HP</text></svg>">
+
+  <!-- Premium Google Fonts: Russo One (Titles/Display), Raleway (Subtitles/Refined Sans), Oswald, Plus Jakarta Sans, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Russo+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Cache Control for Immediate Refresh -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/base.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/components.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/hero.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/drone-scroll.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/projects.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/timeline.css?v=20261026_rev25">
+  <link rel="stylesheet" href="css/responsive.css?v=20261026_rev25">
+</head>
+<body class="preloader-active">
+
+  <!-- ========================================================
+       WEBSITE BOOT INITIALIZATION PRELOADER
+       ======================================================== -->
+  <div class="site-preloader" id="site-preloader" role="dialog" aria-modal="true" aria-label="Loading Portfolio">
+    <div class="preloader-container">
+      <div class="preloader-video-frame">
+        <video id="preloader-video" autoplay muted playsinline loop preload="auto">
+          <source src="assets/videos/loader.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="preloader-meta">
+        <div class="preloader-system-tag">
+          <span class="blinking-led"></span>
+          <span>M. HARI PRASAD // EMBEDDED ARCHITECTURE</span>
+        </div>
+        <div class="preloader-status" id="preloader-status">
+          [ SYSTEM BOOT ] Initializing Firmware Core...
+        </div>
+        <div class="preloader-progress-track">
+          <div class="preloader-progress-fill" id="preloader-bar"></div>
+        </div>
+        <div class="preloader-footer">
+          <span>PORTFOLIO INITIALIZATION</span>
+          <span class="preloader-counter" id="preloader-counter">00%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       TOP NAVIGATION BAR
+       ======================================================== -->
+  <header class="navbar" id="main-navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="nav-logo-box">HP</span>
+        <span>HARI PRASAD <span style="color:var(--cyan-primary);">//</span> EMBEDDED</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Telemetry</a></li>
+        <li><a href="#drone-section" class="nav-link">Engineering Profile</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="assets/resume/M_Hariprasad_Resume.html" target="_blank" class="btn btn-ghost btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          Resume
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">Engage</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <a href="#hero" class="drawer-link">// 01 &bull; Telemetry Home</a>
+    <a href="#drone-section" class="drawer-link">// 02 &bull; Engineering Profile &amp; Drone</a>
+    <a href="#skills" class="drawer-link">// 03 &bull; Technical Competencies</a>
+    <a href="#projects" class="drawer-link">// 04 &bull; Engineering Projects</a>
+    <a href="#experience" class="drawer-link">// 05 &bull; Career &amp; Education</a>
+    <a href="#contact" class="drawer-link">// 06 &bull; Contact Engineer</a>
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <a href="assets/resume/M_Hariprasad_Resume.docx" download class="btn btn-primary btn-sm" style="flex:1;">Download .DOCX</a>
+      <a href="assets/resume/M_Hariprasad_Resume.html" target="_blank" class="btn btn-ghost btn-sm" style="flex:1;">View Resume</a>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       HERO SECTION (LANDING PAGE WITH VIDEO BACKGROUND)
+       ======================================================== -->
+  <section class="hero-section" id="hero">
+    <!-- Looping Native Background Video (Google Drive Video 1) -->
+    <div class="hero-video-container">
+      <video class="hero-bg-video" id="hero-bg-video" autoplay loop muted playsinline poster="assets/images/projects/can-elevator.svg">
+        <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-scanlines"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <!-- Left: Text & Identification -->
+        <div class="hero-text">
+          <h1 class="hero-name">
+            M. Hari Prasad
+            <span class="hero-title-role">Embedded Systems &amp; Firmware Engineer</span>
+          </h1>
+
+          <div class="hero-title">
+            ARM ARCHITECTURE &bull; CAN BUS 2.0B &bull; FREERTOS &bull; IOT
+          </div>
+
+          <div class="hero-desc-card">
+            <p class="hero-desc">
+              Bridging low-level silicon and real-time intelligence. Electrical &amp; Electronics Engineer with hands-on mastery in register-level bare-metal C programming on <span class="highlight-chip">ARM7 (LPC2129)</span>, <span class="highlight-chip">STM32 Cortex-M</span>, and <span class="highlight-chip">ESP32</span>. Specializing in deterministic bus protocols (<span class="highlight-gold">CAN, SPI, I2C, UART</span>), switchgear diagnostics, and safety-critical edge architectures.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Explore Projects
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Visual with illuminated Hexagon & Zero Overlay Lines -->
+        <div class="hero-visual">
+          <div class="profile-hex-frame">
+            <div class="hex-glow-ring"></div>
+            <div class="hex-inner-border"></div>
+            <img src="assets/images/profile.jpg" alt="M. Hari Prasad - Embedded Systems Engineer" class="profile-avatar-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       LOWERED STATS KPI BAR SECTION
+       ======================================================== -->
+  <section class="stats-transition-section">
+    <div class="container">
+      <div class="hero-stats-bar">
+        <div class="stat-item">
+          <span class="stat-value">8+</span>
+          <span class="stat-label">Microcontroller Families</span>
+          <span class="stat-sub">ARM7, STM32, ESP32, 8051</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">5+</span>
+          <span class="stat-label">Industrial Bus Protocols</span>
+          <span class="stat-sub">CAN 2.0B, SPI, I2C, UART, RF</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">8+</span>
+          <span class="stat-label">Verified Systems Built</span>
+          <span class="stat-sub">Automotive, Cleanroom, IoT</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">&lt; 5µs</span>
+          <span class="stat-label">Interrupt Latency Focus</span>
+          <span class="stat-sub">Bare-Metal VIC &amp; NVIC Handlers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       INTEGRATED DRONE 3D SCROLL & ENGINEERING PROFILE
+       Storytelling cross-fade on left, synchronized 3D rotation on right
+       ======================================================== -->
+  <section class="drone-section" id="drone-section">
+    <div class="drone-sticky-wrapper" id="drone-sticky-wrapper">
+      <div class="drone-grid-overlay"></div>
+
+      <!-- LEFT COLUMN: Engineering Profile Storytelling Stages (Overlapping Fade) -->
+      <div class="drone-story-col">
+        <div class="story-progress-indicator">
+          <span class="story-dot active" data-stage="0" title="Stage 01: Silicon & Deterministic Control"></span>
+          <span class="story-dot" data-stage="1" title="Stage 02: Industrial Field Service"></span>
+          <span class="story-dot" data-stage="2" title="Stage 03: Bus Protocols & RTOS"></span>
+          <span class="story-dot" data-stage="3" title="Stage 04: Academic Credentials"></span>
+        </div>
+
+        <div class="story-cards-wrapper">
+          <!-- Stage 0: Hardware-Software Integration -->
+          <div class="story-stage active" id="story-stage-0">
+            <span class="drone-section-label">ENGINEERING PROFILE // STAGE 01</span>
+            <h2 class="drone-heading">Hardware-Software Integration &amp; Silicon Control</h2>
+            <div class="drone-subheading">Bare-Metal C &bull; ARM7 LPC2129 &bull; STM32 NVIC &bull; Deterministic Timing</div>
+            <p class="drone-desc">
+              Bridging bare-metal registers, timing constraints, and silicon peripherals. Specializing in register-level C programming without bloated abstractions. Hands-on development on ARM7 (LPC2129), STM32 Cortex-M, and ESP32 with sub-5µs interrupt response.
+            </p>
+            <div class="story-badges-grid">
+              <span class="story-badge">Bare-Metal Register C</span>
+              <span class="story-badge">ARM7 TDMI &bull; LPC2129</span>
+              <span class="story-badge">STM32 Cortex-M NVIC</span>
+              <span class="story-badge">&lt; 5µs Interrupt Latency</span>
+            </div>
+          </div>
+
+          <!-- Stage 1: Core Embedded & Industrial Experience -->
+          <div class="story-stage" id="story-stage-1">
+            <span class="drone-section-label">CORE EMBEDDED &amp; INDUSTRIAL EXPERIENCE // STAGE 02</span>
+            <h2 class="drone-heading">Production Embedded Systems &amp; Field Engineering</h2>
+            <div class="drone-subheading">Fabhost Web Solutions (Chennai) &bull; Ex-Safvolt Switchgears (Coimbatore)</div>
+            <p class="drone-desc">
+              Active Embedded Engineer at Fabhost Web Solutions architecting production IoT gateways, STM32 / ESP32 firmware stacks, and FreeRTOS deterministic multitasking kernels. Backed by extensive field servicing of high-voltage industrial switchgear and vacuum circuit breakers at Safvolt Switchgears.
+            </p>
+            <div class="story-badges-grid">
+              <span class="story-badge">Fabhost Web Solutions</span>
+              <span class="story-badge">Embedded Engineer (Active)</span>
+              <span class="story-badge">STM32 &amp; ESP32 Production</span>
+              <span class="story-badge">Safvolt Switchgears</span>
+            </div>
+          </div>
+
+          <!-- Stage 2: Bus Protocols & RTOS -->
+          <div class="story-stage" id="story-stage-2">
+            <span class="drone-section-label">BUS PROTOCOLS &amp; RTOS // STAGE 03</span>
+            <h2 class="drone-heading">Deterministic CAN Bus &amp; FreeRTOS Kernels</h2>
+            <div class="drone-subheading">CAN 2.0B &bull; SPI 10MHz &bull; I2C &bull; UART Ring Buffers &bull; Preemption</div>
+            <p class="drone-desc">
+              Architecting noise-immune multi-node networks using Controller Area Network (CAN 2.0B) with priority arbitration and acceptance masks. Deploying FreeRTOS preemptive schedulers with mutexes, queues, and counting semaphores to eliminate priority inversion and race hazards.
+            </p>
+            <div class="story-badges-grid">
+              <span class="story-badge">CAN 2.0B Differential</span>
+              <span class="story-badge">FreeRTOS Mutex &amp; Queues</span>
+              <span class="story-badge">10 MHz SPI High-Speed Bus</span>
+              <span class="story-badge">Zero Memory Corruption</span>
+            </div>
+          </div>
+
+          <!-- Stage 3: Academic Qualifications & Vector India -->
+          <div class="story-stage" id="story-stage-3">
+            <span class="drone-section-label">ACADEMIC &amp; SPECIALIZED CREDENTIALS // STAGE 04</span>
+            <h2 class="drone-heading">Formal Engineering &amp; Vector India Certification</h2>
+            <div class="drone-subheading">Dr. N.G.P. Institute of Tech &bull; Vector India Pvt Ltd &bull; Konghu Velalar</div>
+            <p class="drone-desc">
+              B.E. in Electrical &amp; Electronics Engineering (CGPA: 7.50). Completed intensive Advanced Embedded Systems Certification at Vector India Private Limited, mastering direct register control, peripheral interfacing, and embedded toolchains.
+            </p>
+            <div class="story-badges-grid">
+              <span class="story-badge">B.E. EEE (CGPA 7.50)</span>
+              <span class="story-badge">Vector India Certified</span>
+              <span class="story-badge">Diploma EEE (77.0%)</span>
+              <span class="story-badge">Lifelong Hardware Craftsman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Clean Pure 3D Drone Canvas (Zero Double Vision, Zero Overlay Text) -->
+      <div class="drone-canvas-col">
+        <div class="drone-interactive-stage" id="drone-interactive-stage">
+          <canvas id="drone-canvas" class="drone-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========================================================
+       TECHNICAL SKILLS MATRIX SECTION
+       ======================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills <span class="text-gradient">&amp; Engineering Stack</span></h2>
+        <p class="section-subtitle">
+          Comprehensive breakdown of programming languages, microcontroller architectures, communication protocols, RTOS concepts, and hardware design tools.
+        </p>
+      </div>
+
+      <!-- Dynamically filled by js/app.js from PORTFOLIO_DATA -->
+      <div class="skills-grid-container" id="skills-grid-container"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FEATURED PROJECTS: INTERACTIVE PCB MOTHERBOARD WITH EMBEDDED TECH VIDEO
+       ======================================================== -->
+  <section class="section section-alt" id="projects">
+    <div class="container" style="position:relative; z-index:5;">
+      <div class="section-header" style="text-align: center;">
+        <h2 class="section-title">Engineering <span class="text-gradient">Projects</span></h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          Click on any IC chip or microcontroller on the carrier board below to inspect its firmware architecture and verified driver code.
+        </p>
+      </div>
+
+      <!-- 1. INTERACTIVE PCB MOTHERBOARD VIEW (ACTIVE BY DEFAULT) -->
+      <div class="pcb-board-container" id="pcb-board-container">
+        <!-- Native Background Video Fitted Directly Inside PCB Board Corners (Top-to-Bottom, Left-to-Right) -->
+        <div class="pcb-video-container">
+          <video class="pcb-bg-video" autoplay loop muted playsinline preload="auto">
+            <source src="assets/videos/closing-tech.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="pcb-video-overlay"></div>
+
+        <!-- 4 Corner PCB Mounting Screws -->
+        <div class="pcb-screw pcb-screw-tl"></div>
+        <div class="pcb-screw pcb-screw-tr"></div>
+        <div class="pcb-screw pcb-screw-bl"></div>
+        <div class="pcb-screw pcb-screw-br"></div>
+
+        <!-- PCB Header Silkscreen -->
+        <div class="pcb-header-silkscreen">
+          <div class="pcb-title-text">
+            <span class="status-indicator"></span>
+            HP-DEV-LAB // MAINBOARD REV 3.0 // MCU CARRIER
+          </div>
+          <div class="pcb-meta-text">
+            LAYER: 4-LAYER COPPER FR4 &bull; VCC: 3.3V / 5.0V &bull; BUS: CAN 2.0B / SPI / I2C / UART
+          </div>
+        </div>
+
+        <!-- Interactive 8 Chips Grid -->
+        <div class="pcb-chips-grid" id="pcb-chips-grid"></div>
+
+        <!-- PCB Footnote Silkscreen -->
+        <div class="pcb-footer-silkscreen">
+          <span>// STATUS: 8/8 HARDWARE CORES VERIFIED // CLICK ANY IC CHIP TO LAUNCH SYSTEM POPUP //</span>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       EXPERIENCE & EDUCATION CIRCUIT TIMELINE SECTION
+       ======================================================== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Career Experience <span class="text-gradient">&amp; Academic Journey</span></h2>
+        <p class="section-subtitle">
+          Embedded engineering experience at Fabhost Web Solutions, industrial field engineering at Safvolt Switchgears, specialized training at Vector India, and formal engineering education in Electrical &amp; Electronics.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:40px;">
+        <!-- Left: Industrial Experience -->
+        <div>
+          <h3 style="font-size:1.3rem; color:#fff; font-weight:700; display:flex; align-items:center; gap:10px;">
+            <span class="royal-lead-marker">//</span> Industrial Experience &amp; Training
+          </h3>
+          <div class="timeline-track" id="experience-timeline">
+            <!-- 1. Current Active Role: Fabhost Web Solutions -->
+            <div class="timeline-node">
+              <div class="node-marker">
+                <span class="node-dot node-dot-current"></span>
+              </div>
+              <div class="node-content">
+                <div class="node-header">
+                  <span class="node-period">June 2026 – Present</span>
+                  <span class="node-badge current-badge">
+                    <span class="status-indicator" style="width:6px; height:6px;"></span>
+                    Full-Time Core Engineering // Current Role
+                  </span>
+                </div>
+                <h3 class="node-title">Embedded Engineer</h3>
+                <h4 class="node-company">Fabhost Web Solutions &bull; <span class="node-loc">T. Nagar, Chennai, Tamil Nadu, India</span></h4>
+                <ul class="node-bullets">
+                  <li>Architecting, developing, and deploying production-grade firmware for high-uptime IoT edge gateways, industrial telemetry nodes, and smart sensor instrumentation platforms using STM32 (ARM Cortex-M) and ESP32 microcontrollers.</li>
+                  <li>Engineering deterministic real-time multitasking systems with FreeRTOS: configured priority-preemptive schedulers, thread-safe inter-task queues, binary semaphores, and mutexes with priority inheritance to eliminate race conditions.</li>
+                  <li>Developing robust low-level bare-metal device drivers for SPI, I2C, UART, and RS-485 / Modbus RTU communication buses, achieving deterministic interrupt response latencies under 5µs.</li>
+                  <li>Implementing secure cloud-connected telemetry stacks utilizing MQTT over TLS and HTTPS REST APIs, integrating JSON serialization, dynamic Wi-Fi/GSM failover, and persistent non-volatile flash logging during network dropouts.</li>
+                  <li>Designing custom schematic captures and multi-layer PCB carrier board layouts, executing hardware board bring-up, signal integrity validation, and in-circuit debugging using Digital Storage Oscilloscopes (DSO), logic analyzers, and JTAG/SWD debuggers.</li>
+                  <li>Building fail-safe Over-The-Air (OTA) firmware upgrade routines featuring dual-partition flash memory bank swap, cryptographic image verification, and automatic rollback protection with 99.9% field reliability.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2. Safvolt Switchgears -->
+            <div class="timeline-node">
+              <div class="node-marker">
+                <span class="node-dot"></span>
+              </div>
+              <div class="node-content">
+                <div class="node-header">
+                  <span class="node-period">April 2024 – June 2025</span>
+                  <span class="node-badge">Full-Time Industrial Experience</span>
+                </div>
+                <h3 class="node-title">Service Engineer</h3>
+                <h4 class="node-company">Safvolt Switchgears Pvt Ltd &bull; <span class="node-loc">Coimbatore, Tamil Nadu, India</span></h4>
+                <ul class="node-bullets">
+                  <li>Conducted comprehensive field servicing, diagnostic troubleshooting, testing, and commissioning of industrial switchgear systems, vacuum circuit breakers (VCB), and motor control centers (MCC).</li>
+                  <li>Identified electrical fault root causes, insulation failures, and contact wear, dramatically minimizing unscheduled plant downtime for manufacturing clients.</li>
+                  <li>Ensured strict compliance with industrial electrical safety standards, protection relay coordination, and breaker timing measurements.</li>
+                  <li>Collaborated with cross-functional plant engineering teams to optimize equipment maintenance intervals and field documentation.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Academic Education -->
+        <div>
+          <h3 style="font-size:1.3rem; color:#fff; font-weight:700; display:flex; align-items:center; gap:10px;">
+            <span class="royal-lead-marker" style="color:var(--gold-primary);">//</span> Formal Education &amp; Qualifications
+          </h3>
+          <div class="timeline-track" id="education-timeline">
+            <!-- 1. Bachelor of Engineering -->
+            <div class="timeline-node">
+              <div class="node-marker">
+                <span class="node-dot"></span>
+              </div>
+              <div class="node-content">
+                <div class="node-header">
+                  <span class="node-period">2020 – 2024</span>
+                  <span class="node-badge grade-badge">CGPA: 7.50 / 10</span>
+                </div>
+                <h3 class="node-title">Bachelor of Engineering (B.E.)</h3>
+                <h4 class="node-company">Dr. N.G.P. Institute of Technology &bull; <span class="node-loc">Coimbatore, Tamil Nadu</span></h4>
+                <p class="node-field">Electrical and Electronics Engineering (EEE)</p>
+                <ul class="node-bullets">
+                  <li>Rigorous coursework in Microprocessors &amp; Microcontrollers, Control Systems, Power Electronics, Linear Integrated Circuits, and Digital Signal Processing.</li>
+                  <li>Graduated with First Class distinction; demonstrated strong applied problem solving in hardware design and circuit simulation.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2. Diploma in EEE -->
+            <div class="timeline-node">
+              <div class="node-marker">
+                <span class="node-dot"></span>
+              </div>
+              <div class="node-content">
+                <div class="node-header">
+                  <span class="node-period">2017 – 2020</span>
+                  <span class="node-badge grade-badge">Grade: 77.0%</span>
+                </div>
+                <h3 class="node-title">Diploma in Electrical &amp; Electronics (DEEE)</h3>
+                <h4 class="node-company">Konghu Velalar Polytechnic College &bull; <span class="node-loc">Perundurai, Erode, Tamil Nadu</span></h4>
+                <p class="node-field">Electrical and Electronics Engineering</p>
+                <ul class="node-bullets">
+                  <li>Hands-on laboratory training in electrical machines, wiring schematics, transformer diagnostics, and solid-state electronics.</li>
+                  <li>Consistently ranked among the top academic performers across the department.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. SSLC -->
+            <div class="timeline-node">
+              <div class="node-marker">
+                <span class="node-dot"></span>
+              </div>
+              <div class="node-content">
+                <div class="node-header">
+                  <span class="node-period">2016 – 2017</span>
+                  <span class="node-badge grade-badge">Grade: 68.6%</span>
+                </div>
+                <h3 class="node-title">Secondary School Leaving Certificate (SSLC)</h3>
+                <h4 class="node-company">Government Boys Higher Secondary School &bull; <span class="node-loc">Perundurai, Erode, Tamil Nadu</span></h4>
+                <p class="node-field">General Science &amp; Mathematics</p>
+                <ul class="node-bullets">
+                  <li>Strong foundation in physics, mathematics, and foundational engineering science principles.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4. Vector India Certification -->
+            <div class="timeline-node">
+              <div class="node-marker">
+                <span class="node-dot"></span>
+              </div>
+              <div class="node-content">
+                <div class="node-header">
+                  <span class="node-period">June 2025 – March 2026</span>
+                  <span class="node-badge">Intensive Professional Training</span>
+                </div>
+                <h3 class="node-title">Advanced Embedded Systems Engineering Trainee</h3>
+                <h4 class="node-company">Vector India Private Limited &bull; <span class="node-loc">Chennai, Tamil Nadu, India</span></h4>
+                <p class="node-field">Embedded Systems &amp; Real-Time Firmware Architecture</p>
+                <ul class="node-bullets">
+                  <li>Underwent intensive specialized hands-on training in ARM (ARM7TDMI / LPC2129, ARM Cortex-M) and 8051 microcontroller hardware architectures.</li>
+                  <li>Mastered low-level C programming, bitwise operations, memory layout, register configuration, and peripheral driver development.</li>
+                  <li>Developed end-to-end communication drivers for CAN 2.0B, SPI, I2C, and UART serial protocols.</li>
+                  <li>Implemented multitasking architectures using FreeRTOS (tasks, queues, semaphores, mutexes) and Linux network socket programming (TCP/IP, UDP).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications & Workshops Sub-section -->
+      <div style="margin-top:60px;">
+        <h3 style="font-size:1.3rem; color:#fff; font-weight:700; margin-bottom:15px; display:flex; align-items:center; gap:10px;">
+          <span class="royal-lead-marker" style="color:var(--emerald-primary);">//</span> Verified Certifications &amp; Technical Workshops
+        </h3>
+        <div class="certifications-grid" id="certifications-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ENGINEERING COLLABORATION & TELEMETRY TRANSMISSION (WITH VIDEO BG)
+       ======================================================== -->
+  <section class="section contact-section" id="contact">
+    <!-- Looping Native Background Video (Google Drive Video) -->
+    <div class="contact-video-container">
+      <video class="contact-bg-video" autoplay loop muted playsinline preload="auto">
+        <source src="assets/videos/connect-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="contact-video-overlay"></div>
+
+    <div class="container" style="position:relative; z-index:5;">
+      <div class="section-header">
+        <div class="section-tag">HARDWARE ENGAGEMENT &amp; DIRECT TRANSMISSION</div>
+        <h2 class="section-title">Engineering Collaboration <span class="text-gradient">&amp; Telemetry Transmission</span></h2>
+        <p class="section-subtitle">
+          Connect directly with M. Hari Prasad for high-reliability embedded firmware architecture, CAN bus networking, IoT telemetry deployments, or technical engineering opportunities.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Direct Verified Contact Cards -->
+        <div class="contact-info">
+          <div class="contact-cards-stack">
+            <!-- Email -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Electronic Mail</div>
+                  <a href="mailto:mhariprasad97@gmail.com" class="contact-val">mhariprasad97@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-trigger" data-copy="mhariprasad97@gmail.com" aria-label="Copy Email">Copy</button>
+            </div>
+
+            <!-- Mobile Phone -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Direct Mobile</div>
+                  <a href="tel:+918925027315" class="contact-val">+91 8925027315</a>
+                </div>
+              </div>
+              <button class="copy-trigger" data-copy="+918925027315" aria-label="Copy Phone">Copy</button>
+            </div>
+
+            <!-- Geographic Coordinates & Google Maps Pinpoint -->
+            <div class="contact-card" id="location-contact-card" style="cursor: pointer;" title="Click to view pinpoint location on Google Maps">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Location Base</div>
+                  <a href="https://www.google.com/maps/search/?api=1&query=11.1085,77.3411" target="_blank" rel="noopener noreferrer" class="contact-val" style="display:inline-flex; align-items:center; gap:6px;">
+                    Tirupur &amp; Coimbatore, Tamil Nadu, India
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=11.1085,77.3411" target="_blank" rel="noopener noreferrer" class="copy-trigger" style="text-decoration:none;">
+                Map
+              </a>
+            </div>
+
+            <!-- GitHub Profile -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">GitHub Profile</div>
+                  <a href="https://github.com/hariprasad1706" target="_blank" rel="noopener noreferrer" class="contact-val">github.com/hariprasad1706</a>
+                </div>
+              </div>
+              <a href="https://github.com/hariprasad1706" target="_blank" rel="noopener noreferrer" class="copy-trigger">Open</a>
+            </div>
+
+            <!-- LinkedIn Profile -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">LinkedIn Profile</div>
+                  <a href="https://www.linkedin.com/in/hari-prasad-m-92461b299" target="_blank" rel="noopener noreferrer" class="contact-val">linkedin.com/in/hari-prasad-m-92461b299</a>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/hari-prasad-m-92461b299" target="_blank" rel="noopener noreferrer" class="copy-trigger">Open</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Transmission Form -->
+        <div class="contact-form-box">
+          <h3 style="font-size:1.3rem; color:#fff; font-weight:700; margin-bottom:20px;">
+            Transmit Message
+          </h3>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Transmitter Name *</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins (Engineering Recruiter)" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Return Frequency / Email *</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="name@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Project Domain / Subject *</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Embedded Firmware Engineer Role / CAN Project">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Transmission Payload *</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Detail your embedded architecture requirements, team goals, or timeline..." required></textarea>
+            </div>
+
+            <div id="form-status" class="form-status"></div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:10px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              Transmit Signal
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PROJECT DEEP-DIVE ARCHITECTURE MODAL
+       ======================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <div class="modal-category-chip" id="modal-category">SYSTEM DOMAIN: CAN &amp; AUTOMOTIVE</div>
+          <h2 id="modal-title" style="font-size:1.5rem; color:#fff; font-weight:800;">Project Title</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-close" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- SVG Architecture Diagram Box -->
+        <div class="modal-diagram-box">
+          <img id="modal-image" src="" alt="System Block Diagram">
+        </div>
+
+        <!-- Objective -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">Engineering Objective</h3>
+          <p id="modal-objective" style="color:#cbd5e1; font-size:0.95rem; line-height:1.6;"></p>
+        </div>
+
+        <!-- Hardware Components -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">Hardware Architecture &amp; Silicon</h3>
+          <ul class="modal-list" id="modal-hardware"></ul>
+        </div>
+
+        <!-- Firmware & Register Implementation -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">Firmware &amp; Low-Level Registers</h3>
+          <ul class="modal-list" id="modal-firmware"></ul>
+        </div>
+
+        <!-- Low-level C/C++ Code Snippet -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">Low-Level C / Firmware Driver Code</h3>
+          <pre class="code-block"><code id="modal-code"></code></pre>
+        </div>
+
+        <!-- Engineering Challenges Overcome -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">Technical Challenges &amp; Debugging Solutions</h3>
+          <ul class="modal-list" id="modal-challenges"></ul>
+        </div>
+
+        <!-- Measurable Outcomes -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">Validated Results &amp; Performance Metrics</h3>
+          <p id="modal-outcomes" style="color:#34d399; font-weight:600; font-family:var(--font-mono); font-size:0.92rem;"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">
+          VERIFIED EMBEDDED IMPLEMENTATION
+        </span>
+        <a href="" id="modal-github-link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          Open GitHub Repository
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0; padding-bottom: 0; justify-content: center; text-align: center;">
+        <div>&copy; 2026 M. Hari Prasad. All Engineering Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts with Automatic Cache-Busting Version Strings -->
+  <script src="js/data.js?v=20261026_rev25"></script>
+  <script src="js/drone-canvas.js?v=20261026_rev25"></script>
+  <script src="js/projects-engine.js?v=20261026_rev25"></script>
+  <script src="js/app.js?v=20261026_rev25"></script>
+</body>
+</html>

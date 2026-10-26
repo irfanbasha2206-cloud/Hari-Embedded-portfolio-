@@ -1,0 +1,72 @@
+/**
+ * DESIGN TOKENS & SYSTEM VARIABLES
+ * Engineering Aesthetic: Dark Silicon, Copper PCB Traces, Electric Cyan, Amber Logic
+ */
+
+:root {
+  /* Color Palette — Royal Midnight & Titanium Obsidian */
+  --bg-darker: #02050e;
+  --bg-dark: #050b18;
+  --bg-card: #081124;
+  --bg-card-hover: #0e1b38;
+  --bg-chip: #0a142c;
+  --border-subtle: rgba(30, 58, 102, 0.55);
+  --border-active: #d4af37;
+
+  /* Accent Colors — Royal Gold, Imperial Amber, Pure Cyan */
+  --gold-primary: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.45);
+  --gold-subtle: rgba(212, 175, 55, 0.12);
+
+  --cyan-primary: #00e5ff;
+  --cyan-glow: rgba(0, 229, 255, 0.45);
+  --cyan-subtle: rgba(0, 229, 255, 0.12);
+
+  --amber-primary: #fbbf24;
+  --amber-glow: rgba(251, 191, 36, 0.45);
+  --amber-subtle: rgba(251, 191, 36, 0.12);
+
+  --emerald-primary: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.45);
+
+  --blue-primary: #3b82f6;
+  --purple-primary: #8b5cf6;
+  --rose-primary: #f43f5e;
+
+  /* Text Colors — High Contrast Titanium & Luminescent Accents */
+  --text-main: #f8fafc;
+  --text-title: #ffffff;
+  --text-subtitle: #e2e8f0;
+  --text-desc: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-cyan: #00f0ff;
+  --text-amber: #fbbf24;
+  --text-gold: #d4af37;
+
+  /* Typography — Russo One (Cyber/Hardware Display), Raleway (Elegant Geometric Sans & Subtitles) */
+  --font-title: 'Russo One', 'Oswald', sans-serif;
+  --font-subtitle: 'Raleway', sans-serif;
+  --font-display: 'Russo One', 'Oswald', sans-serif;
+  --font-sans: 'Raleway', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Space Mono', 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+
+  /* Layout */
+  --max-width: 1220px;
+  --nav-height: 68px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glows */
+  --glow-cyan: 0 0 25px rgba(6, 182, 212, 0.35);
+  --glow-amber: 0 0 25px rgba(245, 158, 11, 0.35);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}

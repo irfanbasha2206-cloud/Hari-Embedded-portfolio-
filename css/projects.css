@@ -1,0 +1,308 @@
+/**
+ * ROYAL LUXURY PCB MOTHERBOARD & PROJECT ARCHITECTURE STYLING
+ * Authentic ENIG Immersion Gold Solder Mask, Surface-Mount IC Chips, and Modal Popup Architecture
+ */
+
+/* ========================================================
+   ROYAL ENIG PCB MOTHERBOARD WITH EMBEDDED CIRCUIT VIDEO
+   - Video strictly confined and aligned to PCB Board corners (Top to Bottom)
+   - Unblurred crystal-clear glass surface for vivid circuitry visibility
+   ======================================================== */
+.pcb-board-container {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #d4af37;
+  border-radius: var(--radius-lg);
+  padding: clamp(18px, 2.5vw, 24px);
+  background: #020612;
+  backdrop-filter: none; /* Unblurred glassmorphism as requested */
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 45px rgba(212, 175, 55, 0.24), inset 0 0 40px rgba(212, 175, 55, 0.08);
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+/* Background Video Confined Strictly to PCB Board Boundaries & Corners */
+.pcb-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.pcb-bg-video {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 0.94;
+  filter: brightness(118%) contrast(112%) saturate(110%);
+  will-change: transform;
+  transform: scale(1.15);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.pcb-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 16, 0.22); /* Ultra-crisp unblurred tint */
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* PCB Solder Mask Texture & Precision Trace Grid */
+.pcb-board-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px, 56px 56px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Luxury Gold & Titanium Mounting Screws at 4 corners */
+.pcb-screw {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fef08a 25%, #d4af37 60%, #78350f 100%);
+  border: 2px solid #92400e;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+  z-index: 4;
+}
+.pcb-screw-tl { top: 14px; left: 14px; }
+.pcb-screw-tr { top: 14px; right: 14px; }
+.pcb-screw-bl { bottom: 14px; left: 14px; }
+.pcb-screw-br { bottom: 14px; right: 14px; }
+
+/* PCB Silkscreen Banner */
+.pcb-header-silkscreen {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.4);
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pcb-title-text {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 400; /* Russo One */
+  color: #fbbf24;
+  letter-spacing: 1.8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 0 14px rgba(245, 158, 11, 0.45);
+}
+
+.pcb-meta-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+/* PCB Chips Grid / 8 Silicon Cores */
+.pcb-chips-grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+/* Individual Interactive IC Chip Footprint */
+.pcb-chip-btn {
+  background: #070e1c;
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border-radius: 8px;
+  padding: 14px 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 125px;
+  text-align: left;
+  outline: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* IC Pins simulation along top and bottom (ENIG Gold Plated Pins) */
+.pcb-chip-btn::before, .pcb-chip-btn::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 4px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #d4af37 0px,
+    #d4af37 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  pointer-events: none;
+  opacity: 0.75;
+}
+.pcb-chip-btn::before { top: -5px; }
+.pcb-chip-btn::after { bottom: -5px; }
+
+/* Chip Hover & Active State */
+.pcb-chip-btn:hover {
+  background: #0c1830;
+  border-color: #fbbf24;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.pcb-chip-btn.active-chip {
+  background: #0f2042;
+  border-color: #fde68a;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Chip Top Row: Reference & Status LED */
+.chip-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.chip-ref-id {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 1.5px;
+}
+
+.chip-led {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  transition: all var(--transition-fast);
+}
+
+.pcb-chip-btn:hover .chip-led {
+  background: #fbbf24;
+  box-shadow: 0 0 12px #fbbf24;
+}
+
+.chip-part-name {
+  font-family: var(--font-mono);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.chip-pkg {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chip-project-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  margin-top: 12px;
+  line-height: 1.35;
+  font-weight: 600;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px;
+}
+
+.chip-click-hint {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin-left: 8px;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.pcb-chip-btn:hover .chip-click-hint {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* PCB Footer Silkscreen */
+.pcb-footer-silkscreen {
+  position: relative;
+  z-index: 3;
+  border-top: 1px dashed rgba(212, 175, 55, 0.35);
+  padding-top: 16px;
+  margin-top: 8px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #fbbf24;
+  letter-spacing: 1.5px;
+}
+
+/* Modal Category Chip */
+.modal-category-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #fbbf24;
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pcb-chips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pcb-chips-grid {
+    grid-template-columns: 1fr;
+  }
+  .pcb-board-container {
+    padding: 20px;
+  }
+}

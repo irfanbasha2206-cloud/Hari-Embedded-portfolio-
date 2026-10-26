@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M. HARI PRASAD - Embedded Systems Engineer Resume</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #0284c7;
+      --text: #334155;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: var(--text);
+      background: #f1f5f9;
+      padding: 30px 15px;
+    }
+    .paper {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px 50px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-radius: 4px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .title-sub {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .contact-bar {
+      margin-top: 10px;
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      color: #475569;
+    }
+    .contact-bar a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-bar a:hover { text-decoration: underline; }
+    section { margin-bottom: 22px; }
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    p { font-size: 13px; margin-bottom: 8px; text-align: justify; }
+    .job, .edu { margin-bottom: 14px; }
+    .row-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--primary);
+    }
+    .row-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .date { font-size: 12px; font-weight: 500; color: #64748b; }
+    ul { padding-left: 18px; font-size: 13px; }
+    li { margin-bottom: 4px; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 6px 12px;
+      font-size: 13px;
+    }
+    .skill-label { font-weight: 700; color: var(--primary); }
+    .btn-bar {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: #0284c7;
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover { background: #0369a1; }
+    .btn-secondary {
+      background: #475569;
+    }
+    .btn-secondary:hover { background: #334155; }
+    @media print {
+      body { background: white; padding: 0; }
+      .paper { box-shadow: none; padding: 0; }
+      .btn-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="btn-bar">
+    <a href="../../index.html" class="btn btn-secondary">&larr; Back to Portfolio</a>
+    <div style="display:flex; gap:10px;">
+      <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+      <a href="M_Hariprasad_Resume.docx" download class="btn">Download .DOCX</a>
+    </div>
+  </div>
+
+  <div class="paper">
+    <header>
+      <h1>M. Hari Prasad</h1>
+      <div class="title-sub">Embedded Systems & Firmware Engineer</div>
+      <div class="contact-bar">
+        <span><strong>Phone:</strong> +91 8925027315</span>
+        <span><strong>Location:</strong> Tirupur, Tamil Nadu, India</span>
+        <span><strong>Email:</strong> <a href="mailto:mhariprasad97@gmail.com">mhariprasad97@gmail.com</a></span>
+        <span><strong>GitHub:</strong> <a href="https://github.com/hariprasad1706" target="_blank">github.com/hariprasad1706</a></span>
+        <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hari-prasad-m-92461b299" target="_blank">linkedin.com/in/hari-prasad-m-92461b299</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Objective</h2>
+      <p>
+        Recent Electrical and Electronics Engineering graduate with a robust specialization in embedded systems, bare-metal C programming, and industrial bus communications. Hands-on experience developing low-level drivers, interrupt service routines, and communication stacks for CAN, UART, I2C, and SPI protocols across ARM7 (LPC2129), STM32, and ESP32 architectures. Comfortable working in Linux environments with FreeRTOS. Proven capability in hardware-software co-design, switchgear diagnostics, and reliable telemetry for automotive and IoT applications.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-label">Languages:</div>
+        <div>C, Embedded C, C++, Python, Shell Scripting, Assembly basics</div>
+
+        <div class="skill-label">Microcontrollers:</div>
+        <div>NXP LPC2129 (ARM7TDMI), STM32 (ARM Cortex-M), ESP32, ESP8266, 8051, PIC, Arduino, Raspberry Pi</div>
+
+        <div class="skill-label">Protocols & Busses:</div>
+        <div>CAN 2.0B, SPI, I2C, UART/USART, USB, 433 MHz RF, WiFi (802.11 b/g/n), TCP/IP Sockets, MQTT</div>
+
+        <div class="skill-label">RTOS & Systems:</div>
+        <div>FreeRTOS (Tasks, Queues, Semaphores, Mutexes, Preemption), Linux (Ubuntu), Bare-Metal Superloops, FSMs</div>
+
+        <div class="skill-label">Hardware & EDA:</div>
+        <div>Sensor Interfacing (IMU MPU6050, BMP085, MQ series, Ultrasonic, Current CT), Relays, Motor Drivers, KiCad, Proteus 8</div>
+
+        <div class="skill-label">Tools & Test:</div>
+        <div>STM32CubeIDE, Keil µVision4, Flash Magic, Logic Analyzers, Digital Storage Oscilloscopes, GDB, Git</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <div class="row-head">
+          <span>FABHOST WEB SOLUTIONS</span>
+          <span class="date">June 2026 &ndash; Present</span>
+        </div>
+        <div class="row-sub">
+          <span>Embedded Engineer</span>
+          <span>T. Nagar, Chennai, Tamil Nadu</span>
+        </div>
+        <ul>
+          <li>Architecting and deploying production firmware for high-uptime IoT edge gateways and telemetry nodes utilizing STM32 and ESP32 microcontrollers.</li>
+          <li>Developing FreeRTOS multitasking firmware with preemptive priority scheduling, inter-task queues, and thread-safe mutex synchronization.</li>
+          <li>Engineering bare-metal device drivers for SPI, I2C, UART, and RS-485 / Modbus with sub-5µs interrupt latency.</li>
+          <li>Implementing secure cloud communication using MQTT over TLS and HTTPS REST APIs with non-volatile flash telemetry buffering.</li>
+          <li>Designing PCB schematics and carrier boards, conducting signal integrity validation, and debugging with Digital Storage Oscilloscopes and logic analyzers.</li>
+          <li>Building dual-partition fail-safe Over-The-Air (OTA) firmware update engines with automatic flash rollback protection.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="row-head">
+          <span>SAFVOLT SWITCHGEARS PVT LTD</span>
+          <span class="date">April 2024 &ndash; June 2025</span>
+        </div>
+        <div class="row-sub">
+          <span>Service Engineer</span>
+          <span>Coimbatore, Tamil Nadu</span>
+        </div>
+        <ul>
+          <li>Delivered on-site diagnostic troubleshooting, installation, testing, and preventive maintenance of high-reliability switchgear and electrical distribution systems.</li>
+          <li>Analyzed fault conditions, minimized industrial equipment downtime, and ensured adherence to electrical safety and protection standards.</li>
+          <li>Interfaced directly with industrial clients to inspect control panels, breaker mechanisms, and power monitoring hardware.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Training & Certifications</h2>
+      <div class="job">
+        <div class="row-head">
+          <span>VECTOR INDIA PRIVATE LIMITED</span>
+          <span class="date">June 2025 &ndash; March 2026</span>
+        </div>
+        <div class="row-sub">
+          <span>Advanced Embedded Systems Certification Program</span>
+          <span>Chennai, Tamil Nadu</span>
+        </div>
+        <ul>
+          <li>Mastered ARM (ARM7TDMI / LPC2129, Cortex) and 8051 hardware architectures with register-level C programming.</li>
+          <li>Developed driver code for UART, I2C, SPI, and Controller Area Network (CAN 2.0B) multi-node communication.</li>
+          <li>Engineered network applications using Linux socket programming, TCP/IP, and FreeRTOS task scheduling.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Embedded Engineering Projects</h2>
+
+      <div class="job">
+        <div class="row-head">
+          <span>CAN-Based Multi-Node Elevator Control System</span>
+          <span class="date">ARM7 LPC2129 &bull; Embedded C</span>
+        </div>
+        <ul>
+          <li>Engineered a deterministic multi-node elevator control network utilizing the Controller Area Network (CAN 2.0B) protocol to guarantee reliable, collision-free communication.</li>
+          <li>Implemented 3 distributed control nodes for floor call requests, lift cab actuation, and emergency overrides with CAN message priority arbitration.</li>
+          <li>Interfaced 16x2 character LCDs for real-time floor position telemetry and integrated DC motor H-Bridge direction and PWM speed control.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="row-head">
+          <span>Smart Safety Monitoring System for Semiconductor Cleanrooms</span>
+          <span class="date">ESP32 &bull; I2C &bull; Cloud IoT</span>
+        </div>
+        <ul>
+          <li>Designed an industrial environmental telemetry system monitoring air pressure (BMP085 via I2C), humidity/temperature (DHT11), VOCs/toxic gases (MQ-135), vibration (SW-420), and equipment current.</li>
+          <li>Built secure HTTPS client telemetry streaming sensor metrics to an IoT cloud dashboard for instant threshold alerts.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="row-head">
+          <span>Dual-Station Public Transport Tracking & Seat Availability Framework</span>
+          <span class="date">ESP32 &bull; 433 MHz RF</span>
+        </div>
+        <ul>
+          <li>Constructed an autonomous bus occupancy tracking framework combining ultrasonic passenger counting, IR seat sensors, and servo door automation.</li>
+          <li>Synchronized real-time seat vacancy data from the Bus Unit to the Bus Stop Station Unit over 433 MHz RF communication.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="row-head">
+          <span>Automotive Airbag & Impact Safety Deployment Controller</span>
+          <span class="date">Embedded C &bull; Safety-Critical</span>
+        </div>
+        <ul>
+          <li>Implemented sub-2.5ms interrupt-driven crash detection logic triggering safety deployment solenoids and high-output emergency alert beacons upon severe deceleration.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu">
+        <div class="row-head">
+          <span>DR. N.G.P. INSTITUTE OF TECHNOLOGY</span>
+          <span class="date">2021 &ndash; 2024</span>
+        </div>
+        <div class="row-sub">
+          <span>Bachelor of Engineering (B.E.) &ndash; Electrical and Electronics Engineering</span>
+          <span>Coimbatore, Tamil Nadu</span>
+        </div>
+        <p><strong>Cumulative GPA:</strong> 7.50 / 10.0</p>
+      </div>
+
+      <div class="edu">
+        <div class="row-head">
+          <span>KONGHU VELALAR POLYTECHNIC COLLEGE</span>
+          <span class="date">2019 &ndash; 2021</span>
+        </div>
+        <div class="row-sub">
+          <span>Diploma of Engineering &ndash; Electrical and Electronics Engineering</span>
+          <span>Erode, Tamil Nadu</span>
+        </div>
+        <p><strong>Percentage:</strong> 77.0% (First Class with Distinction)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Workshops & Languages</h2>
+      <p><strong>Workshops:</strong> Technical Workshop on MATLAB & Simulink | Hands-on Workshop on Autonomous Robotics</p>
+      <p><strong>Languages:</strong> English (Professional Working Proficiency), Tamil (Native)</p>
+    </section>
+  </div>
+</body>
+</html>

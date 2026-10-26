@@ -1,0 +1,350 @@
+/**
+ * DRONE 3D SCROLL & INTEGRATED ENGINEERING PROFILE
+ * - Background matched to exact drone frames dark slate (#2b3338 to #0f1518)
+ * - Radial soft-feather edge mask eliminates all canvas boundaries
+ * - Overlapping story cross-fade stages on left driven by scroll
+ * - Interactive avionics hotspots, radar reticle, and cursor response
+ * - Zero ugly milestone boxes or hud counters
+ */
+
+.drone-section {
+  position: relative;
+  height: 360vh; /* Smooth, comfortable scroll distance for 4 stages */
+  background-color: #0b1013;
+  margin-top: 0;
+}
+
+.drone-sticky-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  background: radial-gradient(circle at 70% 50%, #2b3338 0%, #1a2226 48%, #0d1316 88%);
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Subtle aerospace radar grid overlay */
+.drone-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ========================================================
+   LEFT COLUMN: Dynamic Storytelling Engineering Profile
+   ======================================================== */
+.drone-story-col {
+  position: relative;
+  z-index: 8;
+  width: 44%;
+  max-width: 480px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Progress Dots Indicator */
+.story-progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.story-dot {
+  width: 28px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.story-dot.active {
+  width: 44px;
+  background: #00f0ff;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+
+/* Story Cards Stack */
+.story-cards-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+}
+
+.story-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(35px) scale(0.97);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.5s;
+  pointer-events: none;
+}
+
+.story-stage.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.story-stage.past {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-35px) scale(0.97);
+}
+
+.drone-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #00f0ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drone-section-label::before {
+  content: '//';
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+.drone-heading {
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 2.2vw, 2.05rem);
+  font-weight: 400; /* Russo One */
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  line-height: 1.25;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+}
+
+.drone-subheading {
+  font-family: var(--font-subtitle);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.6px;
+}
+
+.drone-desc {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  color: #e2e8f0;
+  line-height: 1.74;
+}
+
+/* Badges Grid for Each Stage */
+.story-badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.story-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  background: rgba(14, 28, 48, 0.75);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================================
+   RIGHT COLUMN: Drone 3D Canvas
+   ======================================================== */
+.drone-canvas-col {
+  position: relative;
+  z-index: 5;
+  width: 58%;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drone-interactive-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pure 3D Drone Canvas - Full Wing-Span Clearance & Seamless Feathering */
+.drone-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 3;
+  /* Feather outer perimeter into background while preserving full wing and rotor blade tips */
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 68%, transparent 98%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 68%, transparent 98%);
+  pointer-events: none;
+}
+
+/* ========================================================
+   INTERACTIVE AVIONICS HOTSPOT PINS
+   ======================================================== */
+.drone-hotspots-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.drone-hotspot {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hotspot-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  transition: transform 0.2s ease;
+}
+
+.hotspot-pulse {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #00f0ff;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  50% { transform: scale(1.3); opacity: 0.4; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.drone-hotspot:hover .hotspot-dot {
+  transform: scale(1.4);
+  background: #fbbf24;
+  box-shadow: 0 0 15px #fbbf24;
+}
+
+.drone-hotspot:hover .hotspot-pulse {
+  border-color: #fbbf24;
+}
+
+/* Interactive Floating Tooltip */
+.drone-hotspot-tooltip {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(11, 16, 20, 0.92);
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 15;
+  max-width: 320px;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tooltip-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.tooltip-desc {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN
+   ======================================================== */
+@media (max-width: 1024px) {
+  .drone-section {
+    height: 380vh;
+  }
+  .drone-sticky-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .drone-story-col {
+    width: 100%;
+    max-width: none;
+    min-height: 320px;
+    text-align: center;
+    align-items: center;
+  }
+  .story-cards-wrapper {
+    min-height: 260px;
+  }
+  .drone-heading {
+    font-size: 1.8rem;
+  }
+  .story-progress-indicator {
+    justify-content: center;
+  }
+  .story-badges-grid {
+    justify-content: center;
+  }
+  .drone-canvas-col {
+    width: 100%;
+    height: 48vh;
+  }
+  .drone-radar-reticle {
+    width: 340px;
+    height: 340px;
+  }
+}

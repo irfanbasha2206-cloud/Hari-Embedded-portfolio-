@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+
+<defs>
+  <linearGradient id='cyanGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#06b6d4' />
+    <stop offset='100%' stop-color='#3b82f6' />
+  </linearGradient>
+  <linearGradient id='amberGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#f59e0b' />
+    <stop offset='100%' stop-color='#ef4444' />
+  </linearGradient>
+  <linearGradient id='chipGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+    <stop offset='0%' stop-color='#1e293b' />
+    <stop offset='100%' stop-color='#0f172a' />
+  </linearGradient>
+  <pattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'>
+    <path d='M 20 0 L 0 0 0 20' fill='none' stroke='#1e293b' stroke-width='0.5'/>
+  </pattern>
+</defs>
+
+  <rect width="800" height="450" fill="#080e1a" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <text x="40" y="45" font-family="monospace" font-size="13" fill="#8b5cf6" letter-spacing="2">[ WEARABLE EMBEDDED BIOMEDICAL // 6-DOF IMU FUSION ]</text>
+  <text x="40" y="70" font-family="sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">IoT Health Telemetry &amp; IMU Fall Detection System</text>
+
+  <g transform="translate(60, 140)">
+    <rect width="190" height="180" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" />
+    <text x="95" y="30" font-family="monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">BIOMETRIC &amp; MOTION</text>
+    <text x="20" y="65" font-family="monospace" font-size="10" fill="#cbd5e1">• MPU-6050 6-Axis IMU</text>
+    <text x="20" y="90" font-family="monospace" font-size="10" fill="#cbd5e1">• MAX30102 Pulse &amp; SpO2</text>
+    <text x="20" y="115" font-family="monospace" font-size="10" fill="#cbd5e1">• I2C Bus @ 400kHz</text>
+    <text x="20" y="140" font-family="monospace" font-size="10" fill="#cbd5e1">• Precision Skin Temp</text>
+    <text x="20" y="165" font-family="monospace" font-size="9" fill="#a78bfa">Freefall Accel Vector Check</text>
+  </g>
+
+  <line x1="250" y1="230" x2="310" y2="230" stroke="#8b5cf6" stroke-width="2" />
+
+  <g transform="translate(310, 130)">
+    <rect width="200" height="200" rx="10" fill="url(#chipGrad)" stroke="#a78bfa" stroke-width="2" />
+    <rect x="15" y="15" width="170" height="30" rx="4" fill="#8b5cf6" fill-opacity="0.2" />
+    <text x="100" y="35" font-family="monospace" font-size="13" font-weight="bold" fill="#c4b5fd" text-anchor="middle">ESP32 EDGE ENGINE</text>
+    <text x="20" y="75" font-family="monospace" font-size="10" fill="#cbd5e1">1. Dynamic Accel Threshold</text>
+    <text x="20" y="100" font-family="monospace" font-size="10" fill="#cbd5e1">2. Orientation Change Angle</text>
+    <text x="20" y="125" font-family="monospace" font-size="10" fill="#cbd5e1">3. Post-Fall Inactivity Delay</text>
+    <text x="20" y="150" font-family="monospace" font-size="10" fill="#38bdf8">4. Real-Time BPM &amp; SpO2</text>
+    <text x="20" y="180" font-family="monospace" font-size="9" fill="#34d399">False-Alarm Filter Matrix</text>
+  </g>
+
+  <line x1="510" y1="230" x2="570" y2="230" stroke="#38bdf8" stroke-width="2" />
+
+  <g transform="translate(570, 140)">
+    <rect width="170" height="180" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <text x="85" y="30" font-family="monospace" font-size="12" font-weight="bold" fill="#38bdf8" text-anchor="middle">CLOUD &amp; DISPATCH</text>
+    <text x="15" y="65" font-family="monospace" font-size="10" fill="#cbd5e1">• WiFi TLS 1.3 Link</text>
+    <text x="15" y="90" font-family="monospace" font-size="10" fill="#cbd5e1">• Emergency SMS Gateway</text>
+    <text x="15" y="115" font-family="monospace" font-size="10" fill="#cbd5e1">• Physician Live Feed</text>
+    <text x="15" y="140" font-family="monospace" font-size="10" fill="#cbd5e1">• Buzzer SOS Alert</text>
+    <text x="15" y="165" font-family="monospace" font-size="9" fill="#ef4444">Zero Delay Emergency Post</text>
+  </g>
+</svg>

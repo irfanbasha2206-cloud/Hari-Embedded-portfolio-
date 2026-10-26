@@ -1,0 +1,182 @@
+/**
+ * BASE STYLES & RESET
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px; /* Perfect sweet spot: crisp, impactful, zero cut-off */
+  background-color: var(--bg-darker);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-color: var(--bg-darker);
+  color: var(--text-main);
+  line-height: 1.55;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle circuit grid background across entire page */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(30, 46, 79, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 46, 79, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Wrapper */
+.section {
+  padding: clamp(48px, 5.5vw, 75px) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, var(--bg-darker) 0%, #081122 50%, var(--bg-darker) 100%);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Section Header Typography */
+.section-header {
+  margin-bottom: 34px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 2.2px;
+  color: var(--cyan-primary);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-tag::before {
+  content: '//';
+  color: var(--amber-primary);
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--text-title);
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.75rem, 2.4vw, 2.2rem);
+  font-weight: 400; /* Russo One native display geometry */
+  color: var(--text-title);
+  letter-spacing: 0.8px;
+  line-height: 1.25;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.section-title .text-gradient {
+  background: linear-gradient(135deg, #ffffff 15%, #00e5ff 60%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 16px rgba(0, 229, 255, 0.4));
+}
+
+.royal-lead-marker {
+  color: #fbbf24;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  font-family: var(--font-subtitle);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-desc);
+  max-width: 640px;
+  margin-top: 10px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+p {
+  font-family: var(--font-sans);
+  color: var(--text-desc);
+  line-height: 1.72;
+}
+
+/* Links */
+a {
+  color: var(--cyan-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--text-cyan);
+}
+
+/* Monospace Helpers */
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Telemetry Status Dots */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--emerald-primary);
+  box-shadow: 0 0 10px var(--emerald-primary);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}

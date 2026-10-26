@@ -1,0 +1,39 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Redirect API endpoint to Netlify Serverless Function
+[[redirects]]
+  from = "/api/send-message"
+  to = "/.netlify/functions/send-message"
+  status = 200
+
+# Security: Block direct public access to sensitive server and env files
+[[redirects]]
+  from = "/.env"
+  to = "/index.html"
+  status = 404
+
+[[redirects]]
+  from = "/.env.txt"
+  to = "/index.html"
+  status = 404
+
+[[redirects]]
+  from = "/server.py"
+  to = "/index.html"
+  status = 404
+
+# Custom headers for speed, security, and smooth video playback
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/videos/*"
+  [headers.values]
+    Accept-Ranges = "bytes"
+    Cache-Control = "public, max-age=31536000, immutable"
